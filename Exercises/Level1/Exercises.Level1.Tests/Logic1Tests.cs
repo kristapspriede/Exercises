@@ -18,7 +18,6 @@ namespace Exercises.Level1.Tests
         [InlineData(false, 39, false)]
         [InlineData(true, 40, true)]
         [InlineData(false, 39, true)]
-        [InlineData(false, 39, true)]
         public void CigarParty(bool expected, int cigars, bool isWeekend)
         {
             Assert.Equal(expected, _logic1.CigarParty(cigars, isWeekend));
