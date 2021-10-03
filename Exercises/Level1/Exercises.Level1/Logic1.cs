@@ -19,7 +19,7 @@ namespace Exercises.Level1
         /// </summary>
         public bool CigarParty(int cigars, bool isWeekend)
         {
-            throw new NotImplementedException();
+            return (cigars >= 40 && (cigars <= 60 || isWeekend));
         }
 
         /// <summary>
@@ -36,7 +36,19 @@ namespace Exercises.Level1
         /// </summary>
         public int DateFashion(int you, int date)
         {
-            throw new NotImplementedException();
+
+            if (you <= 2 || date <= 2)
+            {
+                return 0;
+            }
+            else if (you >= 8 || date >= 8)
+            {
+                return 2;
+            }
+            else
+            {
+                return 1;
+            }
         }
 
         /// <summary>
@@ -51,7 +63,7 @@ namespace Exercises.Level1
         /// </summary>
         public bool SquirrelPlay(int temp, bool isSummer)
         {
-            throw new NotImplementedException();
+            return (temp >= 60 && (temp <= 90 || (isSummer && temp <= 100)));
         }
 
         /// <summary>
@@ -67,7 +79,18 @@ namespace Exercises.Level1
         /// </summary>
         public int CaughtSpeeding(int speed, bool isBirthday)
         {
-            throw new NotImplementedException();
+            if (speed <= 60 || (isBirthday && speed <= 65))
+            {
+                return 0;
+            }
+            else if (speed >= 61 && (speed <= 80 || (isBirthday && speed <= 85)))
+            {
+                return 1;
+            }
+            else
+            {
+                return 2;
+            }
         }
 
         /// <summary>
@@ -80,7 +103,9 @@ namespace Exercises.Level1
         /// </summary>
         public int SortaSum(int a, int b)
         {
-            throw new NotImplementedException();
+            return (a + b >= 10 && a + b <= 19) 
+                ? 20 
+                : a + b;
         }
 
         /// <summary>
@@ -96,7 +121,14 @@ namespace Exercises.Level1
         /// </summary>
         public string AlarmClock(int day, bool vacation)
         {
-            throw new NotImplementedException();
+
+            return day >= 1 && day <= 5 
+                ? !vacation 
+                    ? "7:00" 
+                    : "10:00" 
+                : !vacation
+                    ? "10:00"
+                    : "off";
         }
 
         /// <summary>
@@ -110,7 +142,7 @@ namespace Exercises.Level1
         /// </summary>
         public bool Love6(int a, int b)
         {
-            throw new NotImplementedException();
+            return a == 6 || b == 6 || a + b == 6 || Math.Abs(a - b) == 6;
         }
 
         /// <summary>
@@ -124,7 +156,7 @@ namespace Exercises.Level1
         /// </summary>
         public bool In1To10(int n, bool outsideMode)
         {
-            throw new NotImplementedException();
+            return !outsideMode ? n >= 1 && n <= 10 : n <= 1 || n >= 10;
         }
 
         /// <summary>
@@ -137,7 +169,7 @@ namespace Exercises.Level1
         /// </summary>
         public bool SpecialEleven(int n)
         {
-            throw new NotImplementedException();
+            return n % 11 <= 1;
         }
 
         /// <summary>
@@ -150,7 +182,7 @@ namespace Exercises.Level1
         /// </summary>
         public bool More20(int n)
         {
-            throw new NotImplementedException();
+            return n % 20 == 1 || n % 20 == 2;
         }
 
         /// <summary>
@@ -163,7 +195,7 @@ namespace Exercises.Level1
         /// </summary>
         public bool Old35(int n)
         {
-            throw new NotImplementedException();
+            return n % 3 == 0 != (n % 5 == 0);
         }
 
         /// <summary>
@@ -177,7 +209,7 @@ namespace Exercises.Level1
         /// </summary>
         public bool Less20(int n)
         {
-            throw new NotImplementedException();
+            return (n + 2) % 20 == 0 || (n + 1) % 20 == 0;
         }
 
         /// <summary>
@@ -191,7 +223,7 @@ namespace Exercises.Level1
         /// </summary>
         public bool NearTen(int num)
         {
-            throw new NotImplementedException();
+            return (num + 2) % 10 == 0 || (num + 1) % 10 == 0 || (num - 2) % 10 == 0 || (num - 1) % 10 == 0 || num % 10 == 0;
         }
 
         /// <summary>
@@ -204,7 +236,9 @@ namespace Exercises.Level1
         /// </summary>
         public int TeenSum(int a, int b)
         {
-            throw new NotImplementedException();
+            return (a >= 13 && a <= 19) || (b >= 13 && b <= 19)
+                ? 19
+                : a + b;
         }
 
         /// <summary>
@@ -218,7 +252,14 @@ namespace Exercises.Level1
         /// </summary>
         public bool AnswerCell(bool isMorning, bool isMom, bool isAsleep)
         {
-            throw new NotImplementedException();
+
+            return isAsleep
+                ? false
+                : isMorning
+                    ? isMom
+                        ? true
+                        : false
+                    : true;
         }
 
         /// <summary>
@@ -234,7 +275,12 @@ namespace Exercises.Level1
         /// </summary>
         public int TeaParty(int tea, int candy)
         {
-            throw new NotImplementedException();
+
+            return ((tea >= 2 * candy || candy >= 2 * tea) && tea >= 5 && candy >= 5) 
+                ? 2 
+                : ((tea >= 5 && candy >= 5) 
+                    ? 1 
+                    : 0);
         }
 
         /// <summary>
