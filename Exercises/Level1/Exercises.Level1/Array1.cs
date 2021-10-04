@@ -42,21 +42,12 @@ namespace Exercises.Level1
         /// makePi() → [3, 1, 4]
         /// </summary>
         public int[] MakePi()
-        {
-            int[] nums = new int[3];
-
-
-
-            var x = Math.PI.ToString();
-            x = string.Concat(x.Split(','));
-
-            for (int i = 0; i <= 2; i++)
-            {
-                nums[i] = int.Parse(x[i].ToString());
-            }
-
-            return nums;
-        }
+            => Math.PI.ToString()
+                    .Replace(",", "")
+                    .Replace(".", "")
+                    .Take(3)
+                    .Select(o => int.Parse(o.ToString()))
+                    .ToArray();
 
         /// <summary>
         /// Given 2 arrays of ints, a and b, return true if they have the same first element or they
