@@ -294,7 +294,21 @@ namespace Exercises.Level1
         /// </summary>
         public string FizzString(string str)
         {
-            throw new NotImplementedException();
+            if (str[0].ToString() == "f")
+            {
+                if (str[str.Length - 1].ToString() == "b")
+                {
+                    return "FizzBuzz";
+                }
+                return "Fizz";
+            }
+
+            if (str[str.Length - 1].ToString() == "b")
+            {
+                return "Buzz";
+            }
+
+            return str;
         }
 
         /// <summary>
@@ -310,7 +324,21 @@ namespace Exercises.Level1
         /// </summary>
         public string FizzString2(int n)
         {
-            throw new NotImplementedException();
+            if (n % 3 == 0)
+            {
+                if (n % 5 == 0)
+                {
+                    return "FizzBuzz" + "!";
+                }
+                return "Fizz" + "!";
+            }
+
+            if (n % 5 == 0)
+            {
+                return "Buzz" + "!";
+            }
+
+            return n + "!";
         }
 
         /// <summary>
@@ -322,7 +350,7 @@ namespace Exercises.Level1
         /// </summary>
         public bool TwoAsOne(int a, int b, int c)
         {
-            throw new NotImplementedException();
+            return a + b == c || a + c == b || b + c == a;
         }
 
         /// <summary>
@@ -335,7 +363,7 @@ namespace Exercises.Level1
         /// </summary>
         public bool InOrder(int a, int b, int c, bool bOk)
         {
-            throw new NotImplementedException();
+            return !bOk ? b > a && c > b : c > b;
         }
 
         /// <summary>
